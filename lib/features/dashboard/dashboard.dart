@@ -13,11 +13,13 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  PersistentTabController controller = PersistentTabController(initialIndex: 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: PersistentTabView(
-        resizeToAvoidBottomInset: true,
+        controller: controller,
 
         tabs: [
           PersistentTabConfig(

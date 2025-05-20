@@ -1,4 +1,6 @@
 import 'package:internsala_test/core/extenstions.dart';
+import 'package:internsala_test/features/portfolio/components/filter.dart';
+import 'package:internsala_test/features/portfolio/project.dart';
 
 class PortfolioScreen extends StatefulWidget {
   const PortfolioScreen({super.key});
@@ -12,14 +14,19 @@ class _PortfolioScreenState extends State<PortfolioScreen>
   late TabController _tabController;
   @override
   void initState() {
-    _tabController = TabController(length: 4, vsync: this, initialIndex: 1);
+    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.white,
+      resizeToAvoidBottomInset: false,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Filter(),
       appBar: AppBar(
+        backgroundColor: AppColor.white,
         title: Text(
           'Portfolio',
           style: context.text.bodyLarge!.copyWith(
@@ -85,10 +92,27 @@ class _PortfolioScreenState extends State<PortfolioScreen>
           Expanded(
             child: TabBarView(
               controller: _tabController,
-              children: [Container(), Container(), Container(), Container()],
+              children: [
+                ProjectTab(),
+                _title('Saved Tab'),
+                _title('Shared Tab'),
+                _title('Achievement Tab'),
+              ],
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _title(String label) {
+    return Center(
+      child: Text(
+        label,
+        style: context.text.bodyLarge!.copyWith(
+          color: AppColor.black,
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }

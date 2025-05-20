@@ -55,6 +55,9 @@ class $AssetsImagesGen {
   AssetGenImage get rectangle19 =>
       const AssetGenImage('assets/images/Rectangle 19.png');
 
+  /// File path: assets/images/filter.svg
+  SvgGenImage get filter => const SvgGenImage('assets/images/filter.svg');
+
   /// File path: assets/images/ic_baseline-notifications.svg
   SvgGenImage get icBaselineNotifications =>
       const SvgGenImage('assets/images/ic_baseline-notifications.svg');
@@ -77,6 +80,7 @@ class $AssetsImagesGen {
     rectangle192,
     rectangle193,
     rectangle19,
+    filter,
     icBaselineNotifications,
     icBaselineSearch,
     icRoundShoppingBag,

@@ -7,5 +7,6 @@
     <color name="inactive_icon">#D6D1D5</color>
     <color name="border_color">#E0E0E0</color>
     <color name="shadow_color">#303030</color>
+    <color name="grey_text">#9E95A2</color>
 
 </resources>

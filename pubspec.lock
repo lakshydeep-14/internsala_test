@@ -9,6 +9,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "82.0.0"
+  advanced_rich_text:
+    dependency: "direct main"
+    description:
+      name: advanced_rich_text
+      sha256: ef2957729cc4a760627a202b6034f2e8a6cd5339737446c68a4e2a308b2392d6
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1+1"
   analyzer:
     dependency: transitive
     description:

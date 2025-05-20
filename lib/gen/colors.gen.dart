@@ -22,6 +22,9 @@ class AppColor {
   /// Color: #9E95A2
   static const Color grey = Color(0xFF9E95A2);
 
+  /// Color: #9E95A2
+  static const Color greyText = Color(0xFF9E95A2);
+
   /// Color: #D6D1D5
   static const Color inactiveIcon = Color(0xFFD6D1D5);
 
